@@ -1,2 +1,16 @@
-# HAIC-Submission-Template
-2025 HAIC의 제출물 폴더 예시 구조입니다!
+# HAI-Submission-Templete
+
+## 2025 HAIC의 제출물 폴더 예시 구조입니다! 
+main.py가 최상단 디렉토리에 위치하도록 해주세요.
+
+## main.py
+`main.py` 파일에서 AI 에이전트 구현에 필요한 다음 항목들을 확인하실 수 있습니다.
+
+* 모델 저장을 위한 전역 변수 설정
+* 보조 함수 및 사용자 정의 클래스 구조
+* 초기화 함수 init()
+ - 모델 로드 방식
+ - 모델 미사용 시 작성법
+* 행동 결정 함수 run()
+ - 입출력 형식 (board_lines, xmax, ymax, [x,y,z])
+ - 입출력  변수 의미 및 주의 사항 
