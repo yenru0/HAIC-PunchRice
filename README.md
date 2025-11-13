@@ -1,16 +1,16 @@
-# HAI-Submission-Templete
+# HAIC-PunchRice
+
+주먹밥 팀을 위한 레포
 
 ## 2025 HAIC의 제출물 폴더 예시 구조입니다! 
-main.py가 최상단 디렉토리에 위치하도록 해주세요.
 
-## main.py
-`main.py` 파일에서 AI 에이전트 구현에 필요한 다음 항목들을 확인하실 수 있습니다.
 
-* 모델 저장을 위한 전역 변수 설정
-* 보조 함수 및 사용자 정의 클래스 구조
-* 초기화 함수 init()
- - 모델 로드 방식
- - 모델 미사용 시 작성법
-* 행동 결정 함수 run()
- - 입출력 형식 (board_lines, xmax, ymax, [x,y,z])
- - 입출력  변수 의미 및 주의 사항 
+`main.py`가 진짜 중요함
+`dist.py`는 `main.py`와 `data/**`를 자동으로 배포 ZIP 아카이브 형태로 압축해주는 스크립트
+
+## `main.py`
+
+다음이 필요함
+* `model = None`
+* `init()`
+* `run(board_lines, xsize, ysize)`
