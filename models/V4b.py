@@ -10,7 +10,7 @@ class V4b(DotsBoxModel):
     Late game (<=20% moves left): depth-limited negamax with undo.
     """
 
-    def __init__(self, search_depth: int = 4) -> None:
+    def __init__(self, search_depth: int = 5) -> None:
         self.SEARCH_DEPTH = search_depth
 
     def init(self) -> None:  # override base
