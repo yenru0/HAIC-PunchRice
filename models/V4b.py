@@ -10,7 +10,8 @@ class V4b(DotsBoxModel):
     Late game (<=20% moves left): depth-limited negamax with undo.
     """
 
-    def __init__(self, search_depth: int = 5) -> None:
+    def __init__(self, search_depth: int = 5, RATIO = 0.2) -> None:
+        self.RATIO = RATIO
         self.SEARCH_DEPTH = search_depth
 
     def init(self) -> None:  # override base
@@ -140,7 +141,7 @@ class V4b(DotsBoxModel):
             return [0, 0, 0]
         total_possible = (xsize * (ysize + 1)) + (ysize * (xsize + 1))
         # Greedy phase (>20% moves left)
-        if len(moves) > total_possible * 0.2:
+        if len(moves) > total_possible * self.RATIO:
             winning: list[list[int]] = []
             safe: list[list[int]] = []
             unsafe: list[list[int]] = []
